@@ -2,7 +2,7 @@
 # tutorial de git + github
 Programación en C ,Clase 03  funciones
 
-  -1 crear una carpeta
+  -1 crear una carpeta e ingresar a la carpeta
 
   -2 clonar el repositorio propio en esa carpeta
 
@@ -27,7 +27,7 @@ Programación en C ,Clase 03  funciones
 
 
 
-Resumen
+#Resumen
 
  clonar : git clone mi-repo
 
