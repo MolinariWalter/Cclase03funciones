@@ -139,3 +139,62 @@
 	"raza.h"
 	<string.h>
 
+1591381350 source:c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Functions.h"
+
+1591381350 c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\functions.h
+	<stdio.h>
+	<stdlib.h>
+
+1591300157 source:c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\mascotas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mascotas.h"
+	"Functions.h"
+
+1591300157 c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\mascotas.h
+
+1591300212 source:c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\raza.c
+	"raza.h"
+	<string.h>
+
+1591300212 c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\raza.h
+
+1591658444 source:c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Functions.h"
+	"clientes_con_mascotas.h"
+	"localidad.h"
+
+1591657569 c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\clientes_con_mascotas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+	"mascotas.h"
+	"raza.h"
+
+1591657912 c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\clientes.h
+
+1591658287 source:c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+	"Functions.h"
+
+1591655226 source:c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\localidad.c
+	"localidad.h"
+	<string.h>
+
+1591653689 c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\localidad.h
+
+1591657490 source:c:\users\wally\desktop\recuperatorio lab 1 parcial 1\cclase03funciones\parcial_programacion_1\clientes_con_mascotas.c
+	"clientes_con_mascotas.h"
+	"Functions.h"
+

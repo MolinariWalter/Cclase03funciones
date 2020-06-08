@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+#include "Functions.h"
 
 #include "clientes_con_mascotas.h"
+#include "localidad.h"
 
 #define T_CLIENTES 10
 #define T_MASCOTAS 20
@@ -14,11 +15,20 @@
 int main()
 {
 
+    char PERRO[50] ="PERRO";
+    //char GATO[50] = "GATO";
+    //char RARO[50] = "RARO";
+
+    int localidad;
+
     int id_duenio = 100;
     int id_duenio_inicial = 100;
     int id_mascota = 10;
     int id_raza = 0;
     int id_localidad = 0;
+
+    eLocalidad lista_localidad[T_LOCALIDAD];
+    harcodear_localidad(lista_localidad,T_LOCALIDAD,&id_localidad);
 
     eRaza listaRaza[T_RAZA];
     harcodear_raza(listaRaza,T_RAZA,&id_raza);
@@ -42,7 +52,7 @@ int main()
 
     do
     {
-        printf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s",
+        printf("%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s",
                 "1.Listar clientes\n",
                 "2.Listar mascotas\n",
                 "3.Listar clientes con sus mascotas\n",
@@ -61,8 +71,10 @@ int main()
                 "16.Mostrar el promedio de edad entre las mascotas\n",
                 "17.Mostrar el promedio de edad entre las mascotas por tipo\n",
                 "18.Mostrar el promedio de mujeres entre los clientes\n",
-                "19.Clientes con mascotas del mismo sexo\n",
-                "20.salir\n",
+                "19.Clientes con mas de 2 o mas mascotas del mismo tipo\n",
+                "20.Mostrar clientes de una localidad ingresada\n",
+                "21.Ordenar por localidad y nombre del cliente\n",
+                "22.salir\n",
                 "Ingrese una opcion: ");
         scanf("%d",&opcion);
 
@@ -199,18 +211,39 @@ int main()
             break;
             case 19:
                 system("cls");
-                printf("CLIENTES CON MASCOTAS DEL MISMO SEXO:\n");
-                printf("clientes con mascotas macho:\n");
+                printf("CLIENTES CON  2 O MAS MASCOTAS DEL MISMO TIPO:\n");
+
+                mostrar_clientes_de_dos_o_mas_mascota(lista_clientes,T_CLIENTES,lista_mascotas,T_MASCOTAS,PERRO);
+                /*printf("clientes con mascotas macho:\n");
                 clientes_mascotas_macho(lista_mascotas,T_MASCOTAS,lista_clientes,T_CLIENTES);
                 printf("clientes con mascotas hembra:\n");
                 clientes_mascotas_hembra(lista_mascotas,T_MASCOTAS,lista_clientes,T_CLIENTES);
+                */
             break;
+            case 20:
+                system("cls");
+                printf("CLIENTES DE UNA LOCALIDAD\n");
+
+                if (UTN_getNumberInt(&localidad,"0. QUILMES\n1.ROSARIO\n2.SANTA ROSA\n Ingrese una opcion :","\nerror..",0,2,3))
+                {
+                    mostrar_clientes_por_localidad(lista_clientes,T_CLIENTES,localidad);
+                }else
+                    {
+                        printf("Error, no es posible mostrar el cliente con la localidad.\n");
+                    }
+
+
+            break;
+            case 21:
+
+            break;
+
         }
 
     system("pause");
     system("cls");
 
-    }while(opcion != 20);
+    }while(opcion != 22);
 
 
     return 0;

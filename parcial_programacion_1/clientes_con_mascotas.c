@@ -75,7 +75,10 @@ void harcodear_clientes(eclientes* lista_clientes,int size_clientes,int* id_duen
 
     char nombre[5][20] = { "marta","juan","pedro","lola","pablo"};
     char apellido[5][20] = {"benitez","leirado","troglio","martinez","fernandez"};
-    char localidad[5][20] = {"avellaneda","san telmo","quilmes","la plata","san jose"};
+    //char localidad[5][20] = {"avellaneda","san telmo","quilmes","la plata","san jose"};
+
+    int id_localidad[5] = {1,0,2,1,0};
+
     int telefono[5] = {4250126,42308970,43346691,41219000,44509901};
     int edad [5] = {42,50,62,26,30};
     char sexo[5][20] = {"FEMENINO","MASCULINO","MASCULINO","FEMENINO","MASCULINO"};
@@ -87,7 +90,8 @@ void harcodear_clientes(eclientes* lista_clientes,int size_clientes,int* id_duen
 
         strcpy(lista_clientes[i].nombre, nombre[i]);
         strcpy(lista_clientes[i].apellido, apellido[i]);
-        strcpy(lista_clientes[i].localidad, localidad[i]);
+        lista_clientes[i].id_localidad = id_localidad[i];
+        //strcpy(lista_clientes[i].localidad, localidad[i]);
         lista_clientes[i].telefono=telefono[i];
         lista_clientes[i].edad = edad[i];
         strcpy(lista_clientes[i].sexo, sexo[i]);
@@ -99,7 +103,9 @@ void harcodear_clientes(eclientes* lista_clientes,int size_clientes,int* id_duen
 
 void mostrar_cliente_con_mascota(eclientes clientes,emascotas mascota)
 {
-    printf("%4d %15s %15s %15s %10d %10d %20s %10s %10s\n",clientes.id,clientes.nombre, clientes.apellido, clientes.localidad ,clientes.telefono, clientes.edad, clientes.sexo, mascota.nombre, mascota.sexo);
+    char localidad [3][50] = {"QUILMES","ROSARIO","SANTA ROSA"};
+
+    printf("%4d %15s %15s %15s %10d %10d %20s %10s %10s\n",clientes.id,clientes.nombre, clientes.apellido,localidad[clientes.id_localidad] /*clientes.localidad*/ ,clientes.telefono, clientes.edad, clientes.sexo, mascota.nombre, mascota.sexo);
 }
 
 
@@ -108,6 +114,7 @@ void mostrarTodos_clientes_mascotas(eclientes* lista_clientes,int size_clientes,
     int i;
     int j;
     char raza[7][10] = {"SIAMES","YAMA","ANGORA","PITBULL","IGUANA","LABRADOR","BULLDOG"};
+    char localidad [3][50] = {"QUILMES","ROSARIO","SANTA ROSA"};
     printf("%30s %15s %15s %15s \n","NOMBRE DEL CLIENTE","MASCOTA","TIPO","RAZA");
     for(i=0;i<size_clientes;i++)
     {
@@ -117,7 +124,7 @@ void mostrarTodos_clientes_mascotas(eclientes* lista_clientes,int size_clientes,
             {
                 if(lista_clientes[i].id == lista_mascotas[j].id_duenio)
                 {
-                    printf("%15s %15s %15s %15s %15s\n",lista_clientes[i].nombre,lista_clientes[i].apellido,lista_mascotas[j].nombre,lista_mascotas[j].tipo, raza[lista_mascotas[j].id_raza] );
+                    printf("%15s %15s %15s %15s %15s %15s\n",lista_clientes[i].nombre,lista_clientes[i].apellido, localidad[lista_clientes[i].id_localidad],lista_mascotas[j].nombre,lista_mascotas[j].tipo, raza[lista_mascotas[j].id_raza] );
                 }
             }
         }
@@ -821,6 +828,59 @@ void mostrar_clientes_mas_de_una_mascota(eclientes* lista_clientes,int size_clie
 
 }
 
+void mostrar_clientes_de_dos_o_mas_mascota(eclientes* lista_clientes,int size_clientes,emascotas* lista_mascotas,int size_mascotas,char* tipo)
+{
+      int i;
+      int j;
+
+    int contador;
+    //char localidad[3][50] = {"QUILMES","ROSARIO","SANTA ROSA"};
+
+    printf("%4s %15s %15s %15s %10s %10s %10s\n","ID","NOMBRE","APELLIDO","LOCALIDAD","TELEFONO","EDAD","SEXO");
+
+
+    for ( i=0 ; i<size_clientes ; i++)
+    {
+
+
+        contador = contador_mascotas_por_cliente(&lista_clientes[i],lista_mascotas,size_mascotas);
+        if ( contador > 2 )
+        {
+            for (j=0;j<size_mascotas;j++)
+            {
+                if ( lista_clientes[i].id == lista_mascotas[j].id_duenio && strcmp( lista_mascotas[j].tipo, tipo) == 0)
+                {
+                    mostrar_cliente_con_mascota(lista_clientes[i],lista_mascotas[j]);
+
+                }
+            }
+
+             contador = 0;
+            //mostrar_cliente( lista_clientes[i]);
+
+        }
+
+    }
+}
+
+int contador_mascotas_por_cliente_del_mismo_tipo(eclientes* cliente,emascotas* lista_mascotas,int size_mascotas)
+{
+    int resultado = 0;
+
+    int j;
+
+    for ( j=0 ; j<size_mascotas ; j++)
+    {
+        if ( cliente->id == lista_mascotas[j].id_duenio)
+        {
+            resultado++;
+        }
+    }
+    return resultado;
+}
+
+
+
 int contador_mascotas_por_cliente(eclientes* cliente,emascotas* lista_mascotas,int size_mascotas)
 {
     int resultado = 0;
@@ -885,3 +945,8 @@ int define_to_string(int definido,char* str)
 
     return ret;
 }
+
+
+
+
+

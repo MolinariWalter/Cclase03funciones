@@ -23,12 +23,15 @@ void inicializar_clientes(eclientes* lista_clientes,int size_clientes)
 
 void mostrar_cliente(eclientes clientes)
 {
-    printf("%4d %15s %15s %15s %10d %10d %20s  \n",clientes.id,clientes.nombre, clientes.apellido, clientes.localidad ,clientes.telefono, clientes.edad, clientes.sexo);
+    char localidad [3][50] = {"QUILMES","ROSARIO","SANTA ROSA"};
+
+    printf("%4d %15s %15s %15s %15d %10d %20s  \n",clientes.id, clientes.nombre, clientes.apellido, localidad[clientes.id_localidad] /*clientes.localidad*/ ,clientes.telefono, clientes.edad, clientes.sexo);
 }
 
 void mostrarTodos_clientes(eclientes* lista_clientes,int size_clientes)
 {
     int i;
+
 
     printf("%4s %15s %15s %15s %10s %10s %10s\n","ID","NOMBRE","APELLIDO","LOCALIDAD","TELEFONO","EDAD","SEXO");
 
@@ -84,10 +87,18 @@ int set_localidad_cliente(eclientes* cliente)
 {
     int resultado = 0;
 
-    if (UTN_getStringName(cliente->localidad,sizeof(cliente->localidad),"ingrese la localidad del cliente: ","error.\n",3) )
+    if (UTN_getNumberInt(&cliente->id_localidad,"ingrese la localidad del cliente \n 0.QUILMES\n 1.ROSARIO\n 2.SANTA ROSA \ningrese: ","\nerror.",0,2,3))
     {
         resultado = 1;
     }
+
+    /*if (UTN_getStringName(cliente->localidad,sizeof(cliente->localidad),"ingrese la localidad del cliente: ","error.\n",3) )
+    {
+        resultado = 1;
+    }*/
+
+
+
     return resultado;
 }
 
@@ -362,4 +373,26 @@ float promedio_clientes_femenino(eclientes* lista_clientes,int size_clientes)
     promedio=(float)cont/femenino;
     return promedio;
 }
+
+
+int mostrar_clientes_por_localidad(eclientes* lista_clientes,int size_clientes,int localidad)
+{
+    int i;
+    int resultado = 0;
+
+    for ( i=0;i<size_clientes;i++)
+    {
+         if (lista_clientes[i].estado == CARGADO &&  lista_clientes[i].id_localidad == localidad)
+         {
+             mostrar_cliente(lista_clientes[i]);
+         }
+    }
+
+
+
+    return resultado;
+}
+
+
+
 

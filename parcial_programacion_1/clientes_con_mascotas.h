@@ -66,6 +66,11 @@ void clientes_mascotas_hembra(emascotas* lista_mascotas,int size_mascotas,eclien
 
 void mostrar_clientes_mas_de_una_mascota(eclientes* lista_clientes,int size_clientes,emascotas* lista_mascotas,int size_mascotas);
 
+void mostrar_clientes_de_dos_o_mas_mascota(eclientes* lista_clientes,int size_clientes,emascotas* lista_mascotas,int size_mascotas,char* tipo);
+
+int contador_mascotas_por_cliente_del_mismo_tipo(eclientes* cliente,emascotas* lista_mascotas,int size_mascotas);
+
+
 int contador_mascotas_por_cliente(eclientes* cliente,emascotas* lista_mascotas,int size_mascotas);
 
 

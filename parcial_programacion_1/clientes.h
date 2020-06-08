@@ -3,7 +3,8 @@ typedef struct
     int id;
     char nombre[20];
     char apellido[20];
-    char localidad[20];
+    //char localidad[20];
+    int id_localidad;
     int telefono;
     int edad;
     char sexo[20];
@@ -45,3 +46,4 @@ float promedio_clientes_masculino(eclientes* lista_clientes,int size_clientes);
 
 float promedio_clientes_femenino(eclientes* lista_clientes,int size_clientes);
 
+int mostrar_clientes_por_localidad(eclientes* lista_clientes,int size_clientes,int localidad);
