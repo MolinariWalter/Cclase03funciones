@@ -1,0 +1,141 @@
+# depslib dependency file v1.0
+1589238526 source:c:\users\wally\desktop\labo-prog 1\modelos primer parcial\practica parcial\parcial_programacion_1\mascotas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mascotas.h"
+
+1589840870 h"
+
+1589240212 source:c:\users\wally\desktop\labo-prog 1\modelos primer parcial\practica parcial\parcial_programacion_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"clientes_con_mascotas.h"
+
+1589845316 con_mascotas.h"
+
+1589237717 c:\users\wally\desktop\labo-prog 1\modelos primer parcial\practica parcial\parcial_programacion_1\clientes.h
+
+1589240658 source:c:\users\wally\desktop\labo-prog 1\modelos primer parcial\practica parcial\parcial_programacion_1\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+
+1589238347 c:\users\wally\desktop\labo-prog 1\modelos primer parcial\practica parcial\parcial_programacion_1\mascotas.h
+
+1589240741 c:\users\wally\desktop\labo-prog 1\modelos primer parcial\practica parcial\parcial_programacion_1\clientes_con_mascotas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+	"mascotas.h"
+
+1589239765 source:c:\users\wally\desktop\labo-prog 1\modelos primer parcial\practica parcial\parcial_programacion_1\clientes_con_mascotas.c
+	"clientes_con_mascotas.h"
+
+1590954328 source:c:\users\wally\desktop\parcial_programacion_1\clientes_con_mascotas.c
+	"clientes_con_mascotas.h"
+	"Functions.h"
+
+1589845590 .h"
+
+1591381822 c:\users\wally\desktop\parcial_programacion_1\clientes_con_mascotas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+	"mascotas.h"
+	"raza.h"
+
+1589841285 
+
+1591300157 c:\users\wally\desktop\parcial_programacion_1\clientes.h
+
+1591300157 c:\users\wally\desktop\parcial_programacion_1\mascotas.h
+
+1591381350 c:\users\wally\desktop\parcial_programacion_1\functions.h
+	<stdio.h>
+	<stdlib.h>
+
+1591381350 source:c:\users\wally\desktop\parcial_programacion_1\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Functions.h"
+
+1591300157 source:c:\users\wally\desktop\parcial_programacion_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"clientes_con_mascotas.h"
+
+1591300157 source:c:\users\wally\desktop\parcial_programacion_1\mascotas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mascotas.h"
+	"Functions.h"
+
+1591300157 source:c:\users\wally\desktop\parcial_programacion_1\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+	"Functions.h"
+
+1591300212 c:\users\wally\desktop\parcial_programacion_1\raza.h
+
+1591300212 source:c:\users\wally\desktop\parcial_programacion_1\raza.c
+	"raza.h"
+	<string.h>
+
+1589834792 source:/home/wally/codeworks/parcial_programacion_1/clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+	"Functions.h"
+
+1589755274 /home/wally/codeworks/parcial_programacion_1/clientes.h
+
+1587743946 /home/wally/codeworks/parcial_programacion_1/Functions.h
+	<stdio.h>
+	<stdlib.h>
+
+1589834892 source:/home/wally/codeworks/parcial_programacion_1/clientes_con_mascotas.c
+	"clientes_con_mascotas.h"
+	"Functions.h"
+
+1589834792 /home/wally/codeworks/parcial_programacion_1/clientes_con_mascotas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+	"mascotas.h"
+	"raza.h"
+
+1589828460 /home/wally/codeworks/parcial_programacion_1/mascotas.h
+
+1589829526 /home/wally/codeworks/parcial_programacion_1/raza.h
+
+1589732006 source:/home/wally/codeworks/parcial_programacion_1/Functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Functions.h"
+
+1589834926 source:/home/wally/codeworks/parcial_programacion_1/main.c
+	<stdio.h>
+	<stdlib.h>
+	"clientes_con_mascotas.h"
+
+1589830072 source:/home/wally/codeworks/parcial_programacion_1/mascotas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mascotas.h"
+
+1589830486 source:/home/wally/codeworks/parcial_programacion_1/raza.c
+	"raza.h"
+	<string.h>
+
